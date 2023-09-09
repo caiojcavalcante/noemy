@@ -14,5 +14,5 @@ export default async function handle(req, res) {
 
   await subscription.save();
 
-  res.status(200);
+  res.status(200).json({ ok: true });
 }

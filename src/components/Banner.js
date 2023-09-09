@@ -8,6 +8,7 @@ export default function Banner() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [responded, setResponded] = useState(false);
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -32,53 +33,47 @@ export default function Banner() {
             Aprenda a como cobrar mais pelos seu serviço, reter seus clientes
             por mais tempo e ser o favorito dentre os profissionais do mercado!
           </p>
-          {/* <input
-            placeholder="Digite seu nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          /> */}
-          <input
-            placeholder="Digite seu email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          {/* <input
-            placeholder="Digite seu número de celular"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          /> */}
-          <button
-            type="submit"
-            style={{
-              backgroundColor: isValidEmail(email) ? "rgb(240,190,59)" : "#000",
-              color: isValidEmail(email) ? "#000" : "#fff",
-            }}
-            onClick={(e) => {
-              e.preventDefault();
-              if (!email || !isValidEmail(email)) {
-                alert("Preencha todos os campos");
-                return;
+          {!responded ? (
+            <>
+              <input
+                placeholder="Digite seu email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button
+                type="submit"
+                style={{
+                  backgroundColor: isValidEmail(email)
+                    ? "rgb(240,190,59)"
+                    : "#000",
+                  color: isValidEmail(email) ? "#000" : "#fff",
+                }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (!email || !isValidEmail(email)) {
+                    alert("Preencha todos os campos");
+                    return;
+                  }
+                  axios.post("/api/subscription", {
+                    name: "nome",
+                    email,
+                    phone: "0",
+                  }).then((res) => {
+                    setResponded(true);
+                  });
+                  setName("");
+                  setEmail("");
+                  setPhone("");
+                }
               }
-              axios.post("/api/subscription", {
-                name,
-                email,
-                phone,
-              });
-              setName("");
-              setEmail("");
-              setPhone("");
-            }}
-          >
-            Inscrever-me
-          </button>
-          {/* <p>
-            Prometemos não usar nenhuma informação de contato para enviar
-            qualquer tipo de SPAM. Os dados coletados são tratados nos termos da
-            Lei Geral de Proteção de Dados e você pode se descadastrar da nossa
-            lista a qualquer momento. Para mais informações, acesse nossa{" "}
-            <u>Política de Privacidade</u>.
-          </p> */}
+              >
+                Inscrever-me
+              </button>
+            </>
+          ) : (
+            <h2>Obrigado por se inscrever!</h2>
+          )}
         </form>
       </Section>
     </Center>
