@@ -10,8 +10,8 @@ export default function Home() {
       <Head>
         <title>Os segredos de um atendimento inesquecível</title>
       </Head>
-      <CountDown />
       <Banner />
+      <CountDown />
       <About />
     </>
   );
