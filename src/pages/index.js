@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Banner from "@/components/Banner";
-import CountDown from "@/components/Countdown";
+import CountDown from "@/components/Countdown.jsx";
 import About from "@/components/About";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
       <Head>
         <title>Os segredos de um atendimento inesquecível</title>
       </Head>
-      <Banner />
       <CountDown />
+      <Banner />
       <About />
     </>
   );

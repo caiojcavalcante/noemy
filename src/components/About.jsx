@@ -12,16 +12,20 @@ export default function About() {
           CHEN?
         </h1>
       </TextWrapper>
-      <Image src="/noemy.jpeg" alt="noemy" height={400} width={300}
+      <Image
+        src="/noemy.jpeg"
+        alt="noemy"
+        height={400}
+        width={300}
         sizes="(max-width: 1000px) 300px, 1022px"
       />
       <Box>
         <p>
-          lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          facilisi. Nullam euismod, nisl eget aliquam ultricies, ipsum sapien
-          ultricies nunc, euismod aliquet nunc diam vitae urna. Nulla facilisi.
-          Nullam euismod, nisl eget aliquam ultricies, ipsum sapien ultricies
-          nunc, euismod aliquet nunc diam vitae urna.
+          Oie, me chamo Noemy Chen, e minha paixão é o atendimento ao cliente e
+          eu acredito, com toda minha experiência profissional, que a chave
+          secreta para aumentar a receita está em encantar e satisfazer todos os
+          nossos clientes! Cadastre seu e-mail acima e vamos juntos criar
+          experiências memoráveis para fidelizar e crescer.
         </p>
       </Box>
     </Section>
@@ -34,28 +38,34 @@ const Box = styled.div`
   color: #faf6f7;
   padding: 10px;
   height: fit-content;
-  margin: auto 0;
+  width: 30%;
   @media (max-width: 1000px) {
-
+    width: 90%;
   }
 `;
 
 const TextWrapper = styled.div`
-  @media (max-width: 1000px) {
-    text-align: center;
-  }
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 30%;
+  @media (max-width: 1000px) {
+    width: 90%;
+    @media (max-width: 1000px) {
+      text-align: center;
+    }
+  }
   p {
     font-size: 1.5rem;
+    @media (max-width: 1000px) {
+      font-size: 2rem;
+    }
   }
   h1 {
     font-size: 5rem;
     @media (max-width: 1000px) {
-        font-size: 3rem;
+      font-size: 3rem;
     }
   }
   h1,
@@ -66,14 +76,18 @@ const TextWrapper = styled.div`
 `;
 
 const Section = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 0 150px;
+  height: 50vh;
   @media (max-width: 1000px) {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+    gap: 0;
+    height: fit-content;
   }
   background-color: #dedede;
   img {
@@ -87,5 +101,7 @@ const Section = styled.section`
       margin: 0 auto;
       height: auto;
     }
+    //saturate image
+    filter: saturate(1.5);
   }
 `;

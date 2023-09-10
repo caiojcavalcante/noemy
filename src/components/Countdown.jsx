@@ -47,13 +47,16 @@ export default function CountDown() {
 
 const Container = styled.div`
   width: 100%;
+  position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   z-index: 10;
   background-color: #faf6f7;
-  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
   border: 2px solid #0001;
+  height: 80px;
   p,
   h1 {
     padding: 0;
