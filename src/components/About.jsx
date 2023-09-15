@@ -21,11 +21,15 @@ export default function About() {
       />
       <Box>
         <p>
-          Oie, me chamo Noemy Chen, e minha paixão é o atendimento ao cliente e
-          eu acredito, com toda minha experiência profissional, que a chave
-          secreta para aumentar a receita está em encantar e satisfazer todos os
-          nossos clientes! Cadastre seu e-mail acima e vamos juntos criar
-          experiências memoráveis para fidelizar e crescer.
+          Eu sou Noemy Chen, uma especialista em atendimento ao
+          cliente e consultora. Acredito
+          profundamente que a melhor maneira de impulsionar o sucesso
+          empresarial é transformar clientes em fãs leais. É por isso que estou
+          aqui para convidá-lo a participar da nossa aula exclusiva, "Os
+          Segredos de um Atendimento Inesquecível". Nessa aula, compartilharei
+          estratégias práticas e comprovadas que irão diferenciar sua empresa,
+          proporcionando resultados incríveis e a construção de relacionamentos
+          duradouros com seus clientes.
         </p>
       </Box>
     </Section>
@@ -41,6 +45,9 @@ const Box = styled.div`
   width: 30%;
   @media (max-width: 1000px) {
     width: 90%;
+  }
+  p {
+    font-size: .9rem;
   }
 `;
 

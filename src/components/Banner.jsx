@@ -24,10 +24,11 @@ export default function Banner() {
       </div>
       <Section>
         <form>
-          <h1>TRANSFORME SEUS CLIENTES EM FAS!</h1>
+          <h1>Os segredos para um atendimento INESQUECÍVEL!</h1>
           <p>
-            Aprenda o que é necessário para vender mais e cobrar mais pelo seu
-            trabalho no <b>Segredos do Atendimento Inesquecível</b>
+            Pronto para transformar clientes em verdadeiros fãs da sua marca?
+            Não perca esta oportunidade de descobrir os segredos que podem fazer
+            toda a diferença no seu negócio!
           </p>
           {!responded ? (
             <>
