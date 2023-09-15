@@ -21,15 +21,14 @@ export default function About() {
       />
       <Box>
         <p>
-          Eu sou Noemy Chen, uma especialista em atendimento ao
-          cliente e consultora. Acredito
-          profundamente que a melhor maneira de impulsionar o sucesso
-          empresarial é transformar clientes em fãs leais. É por isso que estou
-          aqui para convidá-lo a participar da nossa aula exclusiva, "Os
-          Segredos de um Atendimento Inesquecível". Nessa aula, compartilharei
-          estratégias práticas e comprovadas que irão diferenciar sua empresa,
-          proporcionando resultados incríveis e a construção de relacionamentos
-          duradouros com seus clientes.
+          Eu sou Noemy Chen, uma especialista em atendimento ao cliente e
+          consultora. Acredito profundamente que a melhor maneira de impulsionar
+          o sucesso empresarial é transformar clientes em fãs leais. É por isso
+          que estou aqui para convidá-lo a participar da nossa aula exclusiva,
+          &ldquo;Os Segredos de um Atendimento Inesquecível&rdquo;. Nessa aula,
+          compartilharei estratégias práticas e comprovadas que irão diferenciar
+          sua empresa, proporcionando resultados incríveis e a construção de
+          relacionamentos duradouros com seus clientes.
         </p>
       </Box>
     </Section>
@@ -47,7 +46,7 @@ const Box = styled.div`
     width: 90%;
   }
   p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 `;
 
