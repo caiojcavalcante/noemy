@@ -176,7 +176,7 @@ const Section = styled.div`
       padding: 3% 9%;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     h1 {

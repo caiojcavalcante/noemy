@@ -46,7 +46,7 @@ const Box = styled.div`
     width: 90%;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 `;
 
