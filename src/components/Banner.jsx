@@ -3,6 +3,7 @@ import { isValidElement, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import useMediaQuery from "@/lib/usemediaquery";
+import { useRouter } from "next/router";
 
 export default function Banner() {
   const [name, setName] = useState("");
@@ -13,6 +14,8 @@ export default function Banner() {
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
+
+  const Router = useRouter();
 
   return (
     <Center>
@@ -43,7 +46,7 @@ export default function Banner() {
                 onClick={(e) => {
                   e.preventDefault();
                   if (!email || !isValidEmail(email)) {
-                    alert("Preencha todos os campos");
+                    alert("Preencha corretamente");
                     return;
                   }
                   axios
@@ -55,9 +58,7 @@ export default function Banner() {
                     .then((res) => {
                       setResponded(true);
                     });
-                  setName("");
-                  setEmail("");
-                  setPhone("");
+                  Router.push("/thanks");
                 }}
               >
                 Inscrever-me
