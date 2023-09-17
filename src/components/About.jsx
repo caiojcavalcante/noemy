@@ -4,33 +4,37 @@ import Image from "next/image";
 export default function About() {
   return (
     <Section>
-      <TextWrapper>
-        <p>QUEM É</p>
-        <h1>
-          NOEMY
-          <br />
-          CHEN?
-        </h1>
-      </TextWrapper>
-      <Image
-        src="/noemy.jpeg"
-        alt="noemy"
-        height={400}
-        width={300}
-        sizes="(max-width: 1000px) 300px, 1022px"
-      />
-      <Box>
-        <p>
-          Eu sou Noemy Chen, uma especialista em atendimento ao cliente e
-          consultora. Acredito profundamente que a melhor maneira de impulsionar
-          o sucesso empresarial é transformar clientes em fãs leais. É por isso
-          que estou aqui para convidá-lo a participar da nossa aula exclusiva,
-          &ldquo;Os Segredos de um Atendimento Inesquecível&rdquo;. Nessa aula,
-          compartilharei estratégias práticas e comprovadas que irão diferenciar
-          sua empresa, proporcionando resultados incríveis e a construção de
-          relacionamentos duradouros com seus clientes.
-        </p>
-      </Box>
+      <div>
+        <TextWrapper>
+          <p>QUEM É</p>
+          <h1>
+            NOEMY
+            <br />
+            CHEN?
+          </h1>
+        </TextWrapper>
+      </div>
+      <div>
+        <Image
+          src="/noemy.jpeg"
+          alt="noemy"
+          height={400}
+          width={300}
+          sizes="(max-width: 1000px) 300px, 1022px"
+        />
+      </div>
+      <div>
+        <Box>
+          <p>
+            Eu sou Noemy Chen, uma especialista em atendimento ao cliente e
+            consultora. Acredito profundamente que a melhor maneira de
+            impulsionar o sucesso empresarial é transformar clientes em fãs
+            leais. É por isso que estou aqui para convidá-lo a participar da
+            nossa aula exclusiva, &ldquo;Os Segredos de um Atendimento
+            Inesquecível&rdquo;.
+          </p>
+        </Box>
+      </div>
     </Section>
   );
 }
@@ -39,14 +43,12 @@ const Box = styled.div`
   background-color: rgb(197, 124, 7);
   border-radius: 20px;
   color: #faf6f7;
-  padding: 10px;
+  padding: 20px;
   height: fit-content;
-  width: 30%;
-  @media (max-width: 1000px) {
-    width: 90%;
-  }
+  width: 100%;
   p {
-    font-size: 0.7rem;
+    margin: 0;
+    font-size: 1.2rem;
   }
 `;
 
@@ -55,17 +57,14 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
+  width: fit-content;
   @media (max-width: 1000px) {
-    width: 90%;
-    @media (max-width: 1000px) {
-      text-align: center;
-    }
+    text-align: center;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     @media (max-width: 1000px) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   h1 {
@@ -82,14 +81,23 @@ const TextWrapper = styled.div`
 `;
 
 const Section = styled.section`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 20px;
   padding: 0 150px;
   height: 50vh;
-  @media (max-width: 1000px) {
-    flex-direction: column;
+  @media (max-width: 1500px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
     justify-content: center;
     padding: 10px;
     gap: 0;
@@ -108,6 +116,6 @@ const Section = styled.section`
       height: auto;
     }
     //saturate image
-    filter: saturate(1.5);
+    filter: saturate(1.3);
   }
 `;

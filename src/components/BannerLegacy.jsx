@@ -16,6 +16,12 @@ export default function Banner() {
 
   return (
     <Center>
+      <div className="left">
+        <Image priority src="/01.jpeg" alt="noemy" fill />
+      </div>
+      <div className="right">
+        <Image priority src="/02.jpeg" alt="noemy" fill />
+      </div>
       <Section>
         <form>
           <h1>OS SEGREDOS DE UM ATENDIMENTO INESQUECÍVEL</h1>
@@ -79,14 +85,66 @@ const Center = styled.div`
   align-items: center;
   box-sizing: border-box;
   background-color: #000;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  @media (min-width: 1000px) {
-    background-image: url("/fundo.jpg");
+
+  .left,
+  .right {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 480px;
+    img {
+      //saturate image
+      filter: saturate(1.5);
+      height: 100%;
+      aspect-ratio: 1022/1280;
+      width: fit-content;
+      object-fit: cover;
+    }
   }
-  @media (max-width: 1000px) {
-    background-image: url("/fundo-mobile.jpg");
+
+  .left {
+    left: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      z-index: 1;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .right {
+    right: 0;
+
+    @media (min-width: 1000px) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          270deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 1) 100%
+        );
+        z-index: 1;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
   }
 `;
 
@@ -100,11 +158,10 @@ const Section = styled.div`
   form {
     //fire glow effect red orange yellow shadow
     z-index: 1000;
-    /* box-shadow: 50px -100px 100px 0px #8608, -50px 100px 1000px 0px #fd04,
-      0 200px 200px 50px #000, 0 -200px 200px 50px #000; */
+    box-shadow: 50px -100px 100px 0px #8608, -50px 100px 1000px 0px #fd04,
+      0 200px 200px 50px #000, 0 -200px 200px 50px #000;
     opacity: 0.9;
     width: 95%;
-    max-width: 800px;
     @media (min-width: 1000px) {
       width: 70%;
     }
@@ -116,7 +173,7 @@ const Section = styled.div`
     align-items: center;
     text-align: center;
     @media (min-width: 1000px) {
-      padding: 50px 90px;
+      padding: 3% 9%;
     }
     p {
       font-size: 1.2rem;
@@ -143,6 +200,7 @@ const Section = styled.div`
       box-shadow: inset 0 0 10px 0 #0001;
     }
     button {
+      
       box-sizing: border-box;
       width: 100%;
       border-radius: 100px;

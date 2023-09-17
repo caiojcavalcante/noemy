@@ -1,6 +1,6 @@
-import Calendar from "@/components/icons/calendar";
-import Cheap from "@/components/icons/cheap";
-import Online from "@/components/icons/online";
+import Calendar from "@/components/icons/Calendar";
+import Cheap from "@/components/icons/Cheap";
+import Online from "@/components/icons/Online";
 import Head from "next/head";
 import styled from "styled-components";
 
@@ -18,14 +18,14 @@ export default function Home() {
           <Calendar />
           <p>18/09 a 24/09</p>
           <Cheap />
-          <p>Curso gratuito</p>
+          <p>Evento gratuito</p>
           <Online />
           <p>100% online</p>
         </Box>
         <h2>Falta apenas um passo para concluir sua inscrição</h2>
         <Box>
           <div>
-            <h3>Entre para o grupo do whatsapp oficial do curso</h3>
+            <h3>Entre para o grupo do whatsapp oficial do evento</h3>
             <p>
               Será por lá que vamos te mandar os materiais de apoio das aulas e
               fazer nossas comunicações oficiais.
