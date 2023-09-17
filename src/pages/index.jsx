@@ -3,6 +3,7 @@ import Head from "next/head";
 import Banner from "@/components/Banner";
 import Countdown from "@/components/Countdown.jsx";
 import About from "@/components/About";
+import Benefits from "@/components/Benefits";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <Countdown />
       <Banner />
+      <Benefits />
       <About />
     </>
   );
