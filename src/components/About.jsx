@@ -93,10 +93,14 @@ const Section = styled.section`
   gap: 20px;
   padding: 0 150px;
   height: 50vh;
+  overflow: hidden;
+  max-height: 500px;
+
   @media (max-width: 1500px) {
     padding: 0 20px;
   }
   @media (max-width: 1100px) {
+    max-height: none;
     grid-template-columns: 1fr;
     justify-content: center;
     padding: 10px;
@@ -107,6 +111,7 @@ const Section = styled.section`
   img {
     aspect-ratio: 1022 / 1280;
     height: 100%;
+    max-height: 500px;
     width: auto;
     mix-blend-mode: darken;
     @media (max-width: 1000px) {

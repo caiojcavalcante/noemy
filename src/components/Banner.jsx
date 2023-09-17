@@ -104,7 +104,7 @@ const Section = styled.div`
       0 200px 200px 50px #000, 0 -200px 200px 50px #000; */
     opacity: 0.9;
     width: 95%;
-    max-width: 800px;
+    max-width: 900px;
     @media (min-width: 1000px) {
       width: 70%;
     }
@@ -116,7 +116,7 @@ const Section = styled.div`
     align-items: center;
     text-align: center;
     @media (min-width: 1000px) {
-      padding: 50px 90px;
+      padding: 90px;
     }
     p {
       font-size: 1.2rem;
