@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function Home() {
   const Router = useRouter();
 
-  const link = "https://google.com";
+  const link = "https://chat.whatsapp.com/FTKEMUyxN1uJlA6UCnonlH";
 
   const HandleClick = () => {
     Router.push(link);
@@ -35,10 +35,7 @@ export default function Home() {
         <Box>
           <div>
             <h3>Entre para o grupo do whatsapp oficial do evento</h3>
-            <p>
-              Será por lá que vamos te mandar os materiais de apoio, o conteúdo
-              e as comunicações oficiais.
-            </p>
+            <p>Será por lá que vamos fazer nossas comunicações oficiais</p>
             <Button onClick={() => HandleClick()}>
               ENTRAR PARA O CANAL
               <Image

@@ -68,6 +68,7 @@ const TextWrapper = styled.div`
     }
   }
   h1 {
+    font-weight: 400;
     font-size: 5rem;
     @media (max-width: 1000px) {
       font-size: 3rem;
