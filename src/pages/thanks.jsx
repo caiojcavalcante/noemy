@@ -3,8 +3,17 @@ import Cheap from "@/components/icons/Cheap";
 import Online from "@/components/icons/Online";
 import Head from "next/head";
 import styled from "styled-components";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const Router = useRouter();
+
+  const link = "https://google.com";
+
+  const HandleClick = () => {
+    Router.push(link);
+  };
   return (
     <>
       <Head>
@@ -16,7 +25,7 @@ export default function Home() {
         </h1>
         <Box>
           <Calendar />
-          <p>18/09 a 24/09</p>
+          <p>23 de Outubro</p>
           <Cheap />
           <p>Evento gratuito</p>
           <Online />
@@ -27,12 +36,19 @@ export default function Home() {
           <div>
             <h3>Entre para o grupo do whatsapp oficial do evento</h3>
             <p>
-              Será por lá que vamos te mandar os materiais de apoio das aulas e
-              fazer nossas comunicações oficiais.
+              Será por lá que vamos te mandar os materiais de apoio, o conteúdo
+              e as comunicações oficiais.
             </p>
-            <Button>
+            <Button onClick={() => HandleClick()}>
               ENTRAR PARA O CANAL
-              <img src="/whatsapp.png" />
+              <Image
+                src="/whatsapp.png"
+                alt="whatsapp"
+                width={1030 / 20}
+                height={1024 / 20}
+                quality={100}
+                sizes="100px"
+              />
             </Button>
           </div>
         </Box>
@@ -51,7 +67,14 @@ const Section = styled.section`
   min-height: 100vh;
   padding: 50px 10px;
   text-align: center;
-  background-color: #f2f2f2;
+  background: radial-gradient(
+      circle at 48.75% 32.08%,
+      #ffffff,
+      transparent 120%
+    ),
+    radial-gradient(circle at 97.97% 96.02%, #edc26d, transparent 100%),
+    radial-gradient(circle at 10.09% 24.2%, #f0f0af, transparent 100%),
+    radial-gradient(circle at 50% 50%, #000000, #000000 100%);
   h1,
   h2,
   h3,
@@ -60,12 +83,15 @@ const Section = styled.section`
     padding: 0;
   }
   h1 {
+    text-shadow: -1px 3px 10px rgba(255, 255, 255, 255);
     font-size: 3rem;
+    font-weight: 400;
     @media (max-width: 600px) {
       font-size: 2.3rem;
     }
     b {
-        color: #dfa000;
+      font-weight: 400;
+      color: #dfa000;
     }
   }
   h2 {
@@ -108,7 +134,7 @@ const Box = styled.div`
     gap: 1.5rem;
   }
   background-color: #fff;
-  border: .1px solid #0004;
+  border: 0.1px solid #0004;
   svg {
     height: 30px;
     color: #444;
@@ -137,18 +163,17 @@ const Button = styled.button`
     cursor: pointer;
     filter: brightness(1.1);
   }
-  padding: 17px;
+  padding: 12px;
   border-radius: 2rem;
   border: none;
+  /* border: 1px solid #afb; */
+  border: 0.1px solid #0004;
   font-size: 1.4rem;
-  font-weight: bolder;
+  font-weight: 400;
 
   @media (max-width: 600px) {
     font-size: 1rem;
     padding: 10px;
-  }
-  img {
-    height: 40px;
   }
   box-shadow: 0px 0px 10px 0px #0004;
 `;

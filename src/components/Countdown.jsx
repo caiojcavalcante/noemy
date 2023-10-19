@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 export default function Countdown() {
-  const countDownDate = new Date("Oct 1, 2023 20:00:00").getTime();
+  const countDownDate = new Date("Oct 23, 2023 20:00:00").getTime();
 
   // Update the count down every 1 second
   const [date, setDate] = useState({

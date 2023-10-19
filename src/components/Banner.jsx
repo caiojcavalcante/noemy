@@ -126,7 +126,7 @@ const Section = styled.div`
     h1 {
       padding: 0;
       font-size: 3rem;
-      font-weight: bolder;
+      font-weight: 400;
       width: 90%;
       margin: 0;
     }
@@ -148,7 +148,7 @@ const Section = styled.div`
       width: 100%;
       border-radius: 100px;
       font-size: 1.5rem;
-      font-weight: bolder;
+      font-weight: 500;
       padding: 15px;
       background-color: #000;
       color: #fdfdfd;
